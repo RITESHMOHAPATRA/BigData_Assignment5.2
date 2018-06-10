@@ -1,7 +1,7 @@
 
 
-object Loop_fibonacci {
-  
+object Fibonacci {
+  //recursive fibonacci function
   def fib_recursive(n: Int):Int = {
     if(n==1){
       0
@@ -10,10 +10,11 @@ object Loop_fibonacci {
       1
     }
     else {
-      fib_recursive(n-1)+fib_recursive(n-2)
+      fib_recursive(n-1)+fib_recursive(n-2)//recursive call
     }
   }
   
+  //fibonacci function using loop
   def fib_loop(n :Int) : Int = {
     if(n == 1){
       return 0
@@ -25,7 +26,7 @@ object Loop_fibonacci {
     var a = 0
     var b = 1
     var i = 1
-    while(i<n){
+    while(i<n){//loop
       val c = a+b
       a = b
       b = c
